@@ -16,7 +16,7 @@ app.use(_cors);
 app.use("/api/v1", api);
 
 //... servidor ...
-app.listen(PUERTO, () => {
+const server = app.listen(PUERTO, () => {
     console.log('Listening on '+PUERTO);
 });
 
