@@ -12,6 +12,15 @@ app.use(_bodyParser.urlencoded({ extended: true,
     type: 'application/x-www-form-urlencoded' }));
 app.use(_cors);
 
+//... ruta raíz ...
+app.get("/", (req, res) => {
+    res.json({
+        mensaje: "API Backend - Proyecto Final",
+        version: "1.0",
+        endpoints: "/api/v1"
+    });
+});
+
 //... endpoints ...
 app.use("/api/v1", api);
 
